@@ -1,0 +1,33 @@
+name: "Publish WordPress Post on Release"
+description: "Automatically create a WordPress post when a new GitHub release is published"
+author: "Your Name or Org"
+branding:
+  icon: "upload-cloud"
+  color: "blue"
+
+inputs:
+  wordpress_url:
+    description: "WordPress site URL (e.g., https://yourblog.com)"
+    required: true
+  wordpress_username:
+    description: "WordPress username"
+    required: true
+  wordpress_app_password:
+    description: "WordPress application password"
+    required: true
+  wordpress_category_id:
+    description: "Category ID for 'Code Releases'"
+    required: false
+    default: "1"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run script to publish post
+      shell: bash
+      run: ./entrypoint.sh
+      env:
+        WORDPRESS_URL: ${{ inputs.wordpress_url }}
+        WORDPRESS_USERNAME: ${{ inputs.wordpress_username }}
+        WORDPRESS_APP_PASSWORD: ${{ inputs.wordpress_app_password }}
+        WORDPRESS_CATEGORY_ID: ${{ inputs.wordpress_category_id }}
