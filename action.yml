@@ -23,9 +23,13 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Grant execute permissions
+        shell: bash
+        run: chmod +x $GITHUB_ACTION_PATH/entrypoint.sh
+
     - name: Run script to publish post
-      shell: bash
-      run: ./entrypoint.sh
+        shell: bash
+        run: bash $GITHUB_ACTION_PATH/entrypoint.sh
       env:
         WORDPRESS_URL: ${{ inputs.wordpress_url }}
         WORDPRESS_USERNAME: ${{ inputs.wordpress_username }}
