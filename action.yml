@@ -24,6 +24,12 @@ inputs:
     description: "Category ID for 'Code Releases'"
     required: false
     default: "1"
+  github_event_release_name:
+    description: "Release name"
+    required: true
+  github_event_release_body:
+    description: "Release body"
+    required: true
 
 runs:
   using: "composite"
