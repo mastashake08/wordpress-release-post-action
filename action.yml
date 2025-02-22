@@ -35,3 +35,5 @@ runs:
         WORDPRESS_USERNAME: ${{ inputs.wordpress_username }}
         WORDPRESS_APP_PASSWORD: ${{ inputs.wordpress_app_password }}
         WORDPRESS_CATEGORY_ID: ${{ inputs.wordpress_category_id }}
+        GITHUB_EVENT_RELEASE_NAME: ${{ github.event.release.name }}
+        GITHUB_EVENT_RELEASE_BODY: ${{ github.event.release.body }}
