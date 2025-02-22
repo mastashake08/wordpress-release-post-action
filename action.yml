@@ -24,8 +24,8 @@ runs:
   using: "composite"
   steps:
     - name: Grant execute permissions
-        shell: bash
-        run: chmod +x $GITHUB_ACTION_PATH/entrypoint.sh
+      shell: bash
+      run: chmod +x $GITHUB_ACTION_PATH/entrypoint.sh
 
     - name: Run script to publish post
         shell: bash
