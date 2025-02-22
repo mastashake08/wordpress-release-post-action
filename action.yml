@@ -1,4 +1,4 @@
-name: "Publish WordPress Post on Release"
+name: "Publish WordPress Post on Release!"
 description: "Automatically create a WordPress post when a new GitHub release is published"
 author: "Jyrone Parker"
 branding:
