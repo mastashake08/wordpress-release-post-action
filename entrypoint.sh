@@ -2,8 +2,8 @@
 set -e
 
 echo "Fetching release details..."
-TITLE="${GITHUB_EVENT_RELEASE_NAME}"
-BODY="${GITHUB_EVENT_RELEASE_BODY}"
+TITLE="${{ github.event.release.name }}"
+BODY="${{ github.event.release.body }}"
 
 echo "Creating WordPress post..."
 POST_DATA=$(jq -n \
