@@ -1,6 +1,6 @@
 name: "Publish WordPress Post on Release"
 description: "Automatically create a WordPress post when a new GitHub release is published"
-author: "Your Name or Org"
+author: "Jyrone Parker"
 branding:
   icon: "upload-cloud"
   color: "blue"
